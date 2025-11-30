@@ -23,6 +23,7 @@ public class BankAccountMicroServiceApplication {
     @Bean
     CommandLineRunner start(BankAccountRepository bankAccountRepository, CustomerRepository customerRepository){
         return args -> {
+            System.out.println("Testing DAO Layer: Initializing Data...");
             Stream.of("Yassine","Yahya","Ali","Saad","Hicham").forEach(name->{
                 Customer customer = Customer.builder()
                         .name(name)
